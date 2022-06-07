@@ -7,7 +7,9 @@ Establishing core collection for different crops:
 
 Objective:
 core collection will be based on two objectives.
+
 Distance based measures
+
 Average entry-to-nearest-entry distance (diversity)
 Average accession-to-nearest-entry distance (representativeness)
 
