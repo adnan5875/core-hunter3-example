@@ -704,9 +704,9 @@ geno.lp <- cbind(NAME = row.names(A.lp), A.lp)
 dim(geno.lp) # 54 10245
 row.names(geno.lp) <- NULL
 geno.lp <- cbind(ID = 1:221, geno.lp)
-geno.lp[1:5, 1:5]
-str(geno.lp)
-class(geno.lp)
+#geno.lp[1:5, 1:5]
+#str(geno.lp)
+#class(geno.lp)
 geno.lp[is.na(geno.lp)] <- ""
 write.csv(geno.lp, "./clean_files/geno.lp.csv", row.names = FALSE)
 
@@ -730,7 +730,7 @@ write.csv(lp.sel.name.EN, "./clean_files/lupin.core.selection.name.list_EN.csv",
 lp.sel.mds.EN <- mds.points.lp[mds.points.lp$names %in% lp.sel.name.EN$names, ]
 head(mds.points.lp)
 
-# plot fieldpea lines using EN
+# plot lupin lines using EN
 p2.lp.EN <- mds.points.lp %>%
   ggplot() +
   geom_point(data = mds.points.lp, aes(x = Dim1, y = Dim2), size = 1, col = "blue", alpha = 0.5) +
@@ -758,7 +758,7 @@ write.csv(lp.sel.name.AN, "./clean_files/lupin.core.selection.name.list_AN.csv",
 lp.sel.mds.AN <- mds.points.lp[mds.points.lp$names %in% lp.sel.name.AN$names, ]
 head(mds.points.lp)
 
-# plot fieldpea lines only
+# plot lupin lines only
 p2.lp.AN <- mds.points.lp %>%
   ggplot() +
   geom_point(data = mds.points.lp, aes(x = Dim1, y = Dim2), size = 1, col = "blue", alpha = 0.5) +
